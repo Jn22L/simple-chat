@@ -13,19 +13,20 @@ socket.on("update", function (data) {
   var message = document.createElement("div");
   var node = document.createTextNode(`${data.name}: ${data.message}`);
 
-  var className = "";
-  switch (data.type) {
-    case "message":
-      className = "other";
-      break;
-    case "connect":
-      className = "connect";
-      break;
-    case "disconnect":
-      className = "disconnect";
-      break;
-  }
-  message.classList.add(className);
+// css 적당히 수정  
+//   var className = "";
+//   switch (data.type) {
+//     case "message":
+//       className = "other";
+//       break;
+//     case "connect":
+//       className = "connect";
+//       break;
+//     case "disconnect":
+//       className = "disconnect";
+//       break;
+//   }
+//   message.classList.add(className);
 
   message.appendChild(node);
   chat.appendChild(message);
